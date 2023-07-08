@@ -1026,19 +1026,21 @@
 
 body,
 html {
-  height: 100%;
-  width: 100%;
-  margin: 0;
-  font-family: "Inq", sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-font-smoothing: antialiased;
-  -o-font-smoothing: antialiased;
-  -webkit-overflow-scrolling: touch;
+  max-width: 100%;
+  max-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  border-radius: 12px;
+  background: #ffffff00;
+background-image: url(Untitled\ design.png);
 }
 
 html {
   color: var(--neutral-800);
   overflow-y: scroll;
+  max-height: 100%;
 }
 
 *,
@@ -1050,6 +1052,8 @@ html {
 ul,
 ol {
   padding: 0;
+  max-height: 100%;
+
 }
 
 body,
@@ -1131,12 +1135,12 @@ button {
 }
 
 #app {
-  min-height: 100%;
-  display: flex;
+  min-height:100% ;
 }
 
 .link {
   color: var(--primary-500);
+  
 }
 
 .center-align {
@@ -1162,7 +1166,7 @@ fieldset {
 }
 
 .input-field {
-  background: #fff;
+  background: #ffffff;
 }
 
 .input-field.initially-hidden {
@@ -1183,7 +1187,7 @@ fieldset {
   background: linear-gradient(
     180deg,
     rgba(255, 255, 255, 0) 0%,
-    #ffffff 42.48%
+    rgb(255, 255, 255) 42.48%
   );
   z-index: 2;
 }
@@ -2055,7 +2059,7 @@ fieldset {
 .progress {
   height: 4px;
   width: 0;
-  background-color: var(--progress-bar-color, white);
+  background-color: var(--progress-bar-color, rgb(255, 255, 255));
   position: absolute;
   bottom: -1px;
   border-radius: 2px;
@@ -2148,11 +2152,10 @@ fieldset {
 }
 
 .card-page {
-  display: flex;
   align-items: center;
+  
   justify-content: left;
   width: 100%;
- max-height: 00%;
   background: #ff000000;
   background-image: url(Untitled\ design.png);
   padding: 0rem 0;
@@ -2214,17 +2217,7 @@ fieldset {
   }
 }
 
-.card-header {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 500px;
-  padding-top: 100%;
-  border-top-right-radius: 12;
-  border-top-left-radius: 12px;
-}
+
 
 .card-header[data-has-floating-images="true"][data-floating-left="profile"] {
   margin-bottom: -5%;
@@ -2243,7 +2236,8 @@ fieldset {
   position: absolute;
   width: 100%;
   bottom: 0;
-  height: 20px;
+  height: 0px;
+
 }
 
 .card-header .circle-container {
@@ -2275,7 +2269,7 @@ fieldset {
 
 .card-header .banner-image {
   position: relative;
-  transform: translateY(-250px);
+  transform: translateY(0px);
   width: 100%;
   height: 100%;
   max-height: 100%;
@@ -2359,23 +2353,24 @@ fieldset {
 }
 
 .left-picture {
-  position: absolute;
+  display: block;
   background: #00000000;
-  transform-origin: left;
+  transform-origin: center;
   will-change: transform;
   justify-content: center;
+  position: absolutez;
 
   z-index: 2;
   left: 5%;
-  transform: translateX(30px) translateY(-100px);
-  
+  transform: translateX(0px) translateY(-00px);
+  position:relative;
   animation-name:PHOTO;
   animation-duration: 1.5s;
   animation-fill-mode: forwards;
  }
 @keyframes PHOTO {
-from {top: 300px;}
-to {top: 175PX;}
+from {top: 200px;}
+to {top: 0px;}
 }
 
 .left-picture[data-image-type="profile"] {
@@ -2825,7 +2820,7 @@ to {top: 0px;} }
 .logoo{
   color: #ffffff;
     min-height: 54px;
-    display: flex;
+    display: inherit;
     align-items: center;
     transition: background 0.2s;
     margin: 0;
@@ -2833,7 +2828,7 @@ to {top: 0px;} }
     padding: 0.25rem 1.5rem;
     text-decoration: none;
     font-size: 1.5rem;
-    transform: translateY(-310px)translateX(-10px);
+    transform: translateY(-450px)translateX(-10px);
     position: relative;
     animation-name: example;
     animation-duration: 1.5s;
